@@ -2,10 +2,10 @@
 :root {
     --low-white: hsla(0, 0%, 90%, 0.5);
     --off-white: hsla(0, 0%, 98%, 1);
-    --off-black: hsla(0, 0%, 10%, 1);
+    --low-black: hsla(0, 0%, 10%, 1);
+    --off-black: hsla(0, 0%, 20%, 1);
     --blue-default: #282cfb;
     --border-thick: 0.15rem;
-    /* --off-black: #121212; */
 }
 
 /* Core Html Section */
@@ -19,7 +19,7 @@ body {
     position: relative;
     background-color: var(--low-white);
     line-height: 1.5;
-    color: var(--off-black);
+    color: var(--low-black);
 }
 
 header {
@@ -31,7 +31,15 @@ header {
     top: 0;
     width: 100%;
     border-bottom: var(--border-thick) solid var(--blue-default);
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 6px 0px var(--low-black);
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    background-color: var(--off-white);
+    padding-bottom: 1rem;
 }
 
 nav {
@@ -45,14 +53,6 @@ nav ul {
 
 nav ul li {
     padding: 0 0.5rem;
-}
-
-main {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 6rem;
-    background-color: hsla(0, 0%, 98%, 1);
-    padding-bottom: 1rem;
 }
 
 main>section {
@@ -70,12 +70,16 @@ h2 {
     padding-left: 2rem;
     padding-bottom: 1.5rem;
     font-weight: bold;
-    scroll-margin-top: 6rem;
 }
 
 h3 {
     font-size: 1.5rem;
     padding-left: 4rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
@@ -118,6 +122,10 @@ header h2 {
     border-radius: 50%;
 }
 
+.nav-offset {
+    scroll-margin-top: 6rem;
+}
+
 /* About Me Section */
 
 #about-me p {
@@ -136,12 +144,47 @@ header h2 {
 .sub-section ul li {
     text-align: center;
     width: 12rem;
-    height: 12rem;
     border: var(--border-thick) solid var(--blue-default);
     border-radius: 5px;
     margin: 2rem;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px -5px var(--off-black);
+}
+
+.show-section {
+    display: none;
+}
+
+.show-section a {
+    margin: 1rem 0;
+}
+
+.li-title {
     font-weight: bold;
+    margin: 1.5rem 1rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.li-button {
+    background-color: var(--blue-default);
+    color: var(--off-white);
+    border-radius: var(--border-thick);
+    max-width: 45%;
+    align-self: center;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.li-paragraph {
+    font-size: 0.85rem;
+    text-align: left;
+    padding: 0.75rem;
 }
 
 /* Technologies Section */
