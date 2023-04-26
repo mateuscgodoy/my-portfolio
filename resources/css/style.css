@@ -1,0 +1,101 @@
+html {
+    font-size: 22px;
+    font-family: 'Consolas', 'Andale Mono', sans-serif;
+}
+
+body {
+    position: relative;
+    background-color: black;
+    line-height: 1.5;
+}
+
+header {
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav {
+    align-self: flex-end;
+}
+
+nav ul {
+    display: flex;
+    padding-right: 2rem;
+}
+
+nav ul li {
+    padding: 0 0.5rem;
+}
+
+main {
+    padding-top: 6rem;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding-bottom: 1rem;
+}
+
+main>section {
+    margin: 2rem 0;
+}
+
+h1 {
+    font-size: 2.75rem;
+    padding: 0 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: beige;
+    padding: 2rem 0;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero img {
+    border-radius: 50%;
+    max-width: 40%;
+    min-width: 30%;
+    padding: 5%;
+}
+
+#about-me p {
+    padding: 0 10%;
+}
+
+#technologies ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 25%;
+    justify-content: center;
+}
+
+#technologies img {
+    width: 7rem;
+    height: 7rem;
+    margin: 0 1rem;
+}
+
+#technologies figcaption {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
