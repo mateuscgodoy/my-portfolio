@@ -22,8 +22,14 @@ body {
     color: var(--low-black);
 }
 
+body.dark-mode {
+    color: var(--off-white);
+    background-color: var(--low-black);
+}
+
 header {
     background-color: hsla(0, 0%, 100%, 1);
+    color: var(--off-black);
     display: flex;
     justify-content: space-between;
     padding-top: 1.5rem;
@@ -31,7 +37,13 @@ header {
     top: 0;
     width: 100%;
     border-bottom: var(--border-thick) solid var(--blue-default);
-    box-shadow: 0px 0px 6px 0px var(--low-black);
+    box-shadow: 0px 0px 8px 0px var(--low-black);
+}
+
+header.dark-mode {
+    background-color: hsla(0, 0%, 0%, 1);
+    color: var(--off-white);
+    box-shadow: 0px 0px 8px 0px black;
 }
 
 main {
@@ -42,8 +54,8 @@ main {
     padding-bottom: 1rem;
 }
 
-nav {
-    align-self: flex-end;
+main.dark-mode {
+    background-color: var(--off-black);
 }
 
 nav ul {
@@ -91,8 +103,14 @@ h6 {
 footer {
     text-align: center;
     background-color: hsla(0, 0%, 100%, 1);
+    color: var(--off-black);
     padding: 2rem 0;
     border-top: var(--border-thick) solid var(--blue-default);
+}
+
+footer.dark-mode {
+    background-color: hsla(0, 0%, 0%, 1);
+    color: var(--off-white);
 }
 
 /* Header Section */
@@ -104,6 +122,27 @@ header h2 {
     font-size: 2.2rem;
     font-weight: bold;
     color: var(--blue-default);
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    border: 0;
+}
+
+#dark-mode-btn {
+    width: 6rem;
+    line-height: 1.5;
+    background-color: var(--blue-default);
+    color: var(--off-white);
+    font-size: 0.75rem;
+    border-radius: var(--border-thick);
+    align-self: last baseline;
+    margin-right: 2.5rem;
 }
 
 /* Hero Section */
@@ -152,6 +191,11 @@ header h2 {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 10px 10px -5px var(--off-black);
+}
+
+.sub-section ul li.dark-mode {
+    background-color: black;
+    box-shadow: 0 10px 10px -5px black;
 }
 
 .show-section {
